@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Tech - ¡Tu Compu Como Nueva!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+        }
+        .text-glow {
+            text-shadow: 0 0 8px rgba(241, 126, 172, 0.8), 0 0 10px rgba(241, 126, 172, 0.6);
+        }
+        .card {
+            background-color: rgba(45, 48, 146, 0.2);
+            border: 1px solid rgba(94, 35, 157, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-step {
+            border-color: #5E239D;
+            transition: all 0.3s ease-in-out;
+        }
+        .flow-step:hover {
+            background-color: #5E239D;
+            transform: translateY(-5px);
+        }
+        .cta-button {
+            background: linear-gradient(90deg, #F17EAC, #F8941E);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(241, 126, 172, 0.7);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <header class="text-center my-12">
+            <h1 class="text-5xl md:text-7xl font-black uppercase text-glow">
+                💻 ¡Tu Compu Como Nueva!
+            </h1>
+            <p class="text-lg md:text-xl mt-4 max-w-2xl mx-auto text-gray-300">
+                Reparación, mantenimiento e instalación de software especializado para <span class="font-bold text-white">Mac y Windows</span>. Potenciamos tu creatividad y productividad.
+            </p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <div class="md:col-span-2 card rounded-lg shadow-2xl p-6">
+                <h2 class="text-3xl font-bold text-center mb-4">Especialistas para Creativos y Profesionales</h2>
+                <p class="text-center text-gray-300 mb-6">
+                    Entendemos las herramientas que usas. Ofrecemos instalación y optimización de software para que solo te preocupes por crear.
+                </p>
+                <div class="flex justify-center items-center space-x-4 md:space-x-8 text-center">
+                    <div>
+                        <p class="text-4xl">🎶</p>
+                        <p class="mt-2 font-bold">Producción Musical</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl">🎨</p>
+                        <p class="mt-2 font-bold">Diseño Gráfico</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl">🏛️</p>
+                        <p class="mt-2 font-bold">Arquitectura</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 card rounded-lg shadow-2xl p-6">
+                <h2 class="text-3xl font-bold text-center mb-6">Nuestro Proceso de Atención</h2>
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-4 text-center">
+                    <div class="flow-step p-4 border-l-4 w-full">
+                        <p class="text-2xl mb-2">1️⃣</p>
+                        <h4 class="font-bold text-lg">Contacto Inicial</h4>
+                        <p class="text-sm text-gray-300">Nos escribes y agendas tu revisión gratuita.</p>
+                    </div>
+                    <div class="hidden md:block text-2xl font-bold text-gray-500">→</div>
+                    <div class="flow-step p-4 border-l-4 w-full">
+                        <p class="text-2xl mb-2">2️⃣</p>
+                        <h4 class="font-bold text-lg">Diagnóstico Remoto</h4>
+                        <p class="text-sm text-gray-300">Analizamos el problema y te damos un presupuesto.</p>
+                    </div>
+                    <div class="hidden md:block text-2xl font-bold text-gray-500">→</div>
+                    <div class="flow-step p-4 border-l-4 w-full">
+                        <p class="text-2xl mb-2">3️⃣</p>
+                        <h4 class="font-bold text-lg">Solución Eficaz</h4>
+                        <p class="text-sm text-gray-300">Reparamos, optimizamos o instalamos lo que necesites.</p>
+                    </div>
+                     <div class="hidden md:block text-2xl font-bold text-gray-500">→</div>
+                    <div class="flow-step p-4 border-l-4 w-full">
+                        <p class="text-2xl mb-2">4️⃣</p>
+                        <h4 class="font-bold text-lg">¡Listo para Crear!</h4>
+                        <p class="text-sm text-gray-300">Tu equipo queda 100% funcional y optimizado.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="text-center my-12 card rounded-lg shadow-2xl p-8">
+            <h2 class="text-4xl font-black mb-4">¿Listo para empezar?</h2>
+            <a href="https://wa.me/593998203469" target="_blank" class="cta-button inline-block text-white font-bold text-xl py-4 px-8 rounded-lg shadow-lg">
+                📲 ¡Agenda tu revisión hoy mismo!
+            </a>
+            <div class="mt-8 text-gray-400">
+                <p class="font-bold">📞 0998203469 | 📧 rcordovazurita@gmail.com</p>
+                <p>📍 Atención Remota | Quito, Ecuador</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        function formatLabel(str, maxLen) {
+            if (str.length <= maxLen) {
+                return str;
+            }
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxLen) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const sharedChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#e0e0e0',
+                        font: {
+                            size: 14
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            },
+        };
+    </script>
+</body>
+</html>
